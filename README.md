@@ -8,3 +8,5 @@ brew install gifsicle
 ```
 
 Download latest version from [release](https://github.com/PatelUtkarsh/alfred-video-to-gif/releases).
+
+![Demo](https://github.com/PatelUtkarsh/alfred-video-to-gif/raw/master/demo.gif)
