@@ -87,16 +87,16 @@ FNAME=$(basename "${QUERY}")
 
 SNAME="${FNAME%.*}"
 
-eval $(/usr/local/bin/ffprobe -v error -of flat=s=_ -select_streams v:0 -show_entries stream=height,width $DNAME/$FNAME)
+eval $(ffprobe -v error -of flat=s=_ -select_streams v:0 -show_entries stream=height,width $DNAME/$FNAME)
 SIZE=${streams_stream_0_width}x${streams_stream_0_height}
 
-/usr/local/bin/ffmpeg -i "$DNAME/$FNAME" -s $SIZE -r 24 -f gif - | /usr/local/bin/gifsicle  --delay=3 &gt; "$DNAME/$FNAME.gif"</string>
+ffmpeg -i "$DNAME/$FNAME" -s $SIZE -r 24 -f gif - | gifsicle  --delay=3 &gt; "$DNAME/$FNAME.gif"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -217,7 +217,7 @@ SIZE=${streams_stream_0_width}x${streams_stream_0_height}
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>GIF (or JIF?) ready...</string>
+				<string>GIF ready...</string>
 				<key>textcolor</key>
 				<string></string>
 				<key>wrapat</key>
@@ -298,61 +298,67 @@ SIZE=${streams_stream_0_width}x${streams_stream_0_height}
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Sharing ideas faster</string>
+	<string>Sharing ideas faster.</string>
 	<key>uidata</key>
 	<dict>
 		<key>2CABF55D-A411-4B8D-96B7-00311261D85A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>670</integer>
+			<real>670</real>
 			<key>ypos</key>
-			<integer>60</integer>
+			<real>60</real>
 		</dict>
 		<key>2E380DB6-686F-45E2-935F-32CCCFFDEDE5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>70</integer>
+			<real>70</real>
 			<key>ypos</key>
-			<integer>430</integer>
+			<real>430</real>
 		</dict>
 		<key>47BCB981-B396-492C-A299-935308EF4F77</key>
 		<dict>
 			<key>xpos</key>
-			<integer>60</integer>
+			<real>60</real>
 			<key>ypos</key>
-			<integer>60</integer>
+			<real>60</real>
 		</dict>
 		<key>50696FC5-0B7F-43AA-BD41-27F2756424A0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<real>280</real>
 			<key>ypos</key>
-			<integer>180</integer>
+			<real>180</real>
 		</dict>
 		<key>5689A868-EC5F-4145-A2D2-F516C4C1A516</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>60</integer>
+			<real>60</real>
 		</dict>
 		<key>5869390D-3EC7-46BC-973E-15E3D0461011</key>
 		<dict>
 			<key>note</key>
 			<string>Show the folder and file output</string>
 			<key>xpos</key>
-			<integer>260</integer>
+			<real>260</real>
 			<key>ypos</key>
-			<integer>450</integer>
+			<real>450</real>
 		</dict>
 		<key>7AB3B94B-F4B9-4A38-B086-E847F4854B36</key>
 		<dict>
 			<key>xpos</key>
-			<integer>680</integer>
+			<real>680</real>
 			<key>ypos</key>
-			<integer>180</integer>
+			<real>180</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.1</string>
 	<key>webaddress</key>
 	<string>twitter.com/utkarsh_me</string>
 </dict>
